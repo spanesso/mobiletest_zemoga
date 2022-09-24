@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TYV-XO-gmb">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="Main" storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="mobiletest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zemoga_logo" translatesAutoresizingMaskIntoConstraints="NO" id="v8F-WF-CmS">
+                                <rect key="frame" x="40" y="350.66666666666669" width="310" height="200.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5y6-yW-rSj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading posts ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-F5-shj">
+                                <rect key="frame" x="16" y="550.66666666666663" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1lr-RR-iQE">
+                                <rect key="frame" x="185" y="587.66666666666663" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Xn3-0C-aSE"/>
+                                    <constraint firstAttribute="width" constant="20" id="skR-0M-sjt"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8F-WF-CmS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1ei-9h-heG"/>
+                            <constraint firstItem="1lr-RR-iQE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="37s-lg-Y4w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v8F-WF-CmS" secondAttribute="trailing" constant="40" id="JpW-z3-eyI"/>
+                            <constraint firstItem="v8F-WF-CmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="U2p-e9-aLn"/>
+                            <constraint firstItem="v8F-WF-CmS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="WUg-3H-YdX"/>
+                            <constraint firstItem="9mw-F5-shj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aCO-60-WEP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9mw-F5-shj" secondAttribute="trailing" constant="16" id="fCx-cV-gwf"/>
+                            <constraint firstItem="9mw-F5-shj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fF8-l3-goS"/>
+                            <constraint firstItem="1lr-RR-iQE" firstAttribute="top" secondItem="9mw-F5-shj" secondAttribute="bottom" constant="16" id="gYd-IP-yKS"/>
+                            <constraint firstItem="9mw-F5-shj" firstAttribute="top" secondItem="v8F-WF-CmS" secondAttribute="bottom" id="umw-g0-xBd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w9b-Fb-P7u"/>
+                    <connections>
+                        <outlet property="spinner" destination="1lr-RR-iQE" id="ikw-OS-Oyu"/>
+                        <segue destination="Y66-r7-LOw" kind="show" identifier="postsListSegue" id="5Wp-lZ-ADc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="3.5545023696682461"/>
+        </scene>
+        <!--PostsListID-->
+        <scene sceneID="vO6-7v-uqa">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PostsListID" storyboardName="PostList" referencedIdentifier="PostsListID" id="Y66-r7-LOw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8vj-bS-ZzM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYB-BQ-40v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2439" y="-109"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HB7-z8-Ebp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TYV-XO-gmb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vdz-Ey-goa">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O90-89-reX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VO0-Oo-2oM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730.76923076923072" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="zemoga_logo" width="400" height="142"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

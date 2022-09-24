@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="177" id="hEt-K6-UE7" customClass="CommentCell" customModule="mobiletest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="576" height="177"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hEt-K6-UE7" id="Nhx-h6-7gy">
+                <rect key="frame" x="0.0" y="0.0" width="576" height="177"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGH-xJ-Z4V">
+                        <rect key="frame" x="28" y="19" width="520" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qGH-xJ-Z4V" firstAttribute="leading" secondItem="Nhx-h6-7gy" secondAttribute="leadingMargin" constant="8" id="ZeG-sD-b14"/>
+                    <constraint firstItem="qGH-xJ-Z4V" firstAttribute="top" secondItem="Nhx-h6-7gy" secondAttribute="topMargin" constant="8" id="emk-aQ-oo2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qGH-xJ-Z4V" secondAttribute="trailing" constant="8" id="hq6-rh-rKi"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qGH-xJ-Z4V" secondAttribute="bottom" constant="8" id="sfT-gE-Bgz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="comment" destination="qGH-xJ-Z4V" id="nJg-dl-LN6"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="50.829383886255918"/>
+        </tableViewCell>
+    </objects>
+</document>
